@@ -19,6 +19,11 @@ for i in range(iterations):
     x = logistic(r, x)
     if i >= (iterations - last):
         ax.plot(r, x, ',c', alpha=.25)
+        #use the below command to ignore marker and get a vector line graph
+        #it has vertical lines connecting branches of each bifurcation
+        #but the effect of change in r is more profound
+        #if possible use jupyter notebook and qt backend for best result
+        #ax.plot(r, x, 'c', alpha=.25)
 
 ax.set_xlim(2.5, 4)
 ax.set_title("Bifurcation diagram")
